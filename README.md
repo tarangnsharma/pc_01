@@ -1,16 +1,11 @@
 # pc_01
+### Problem Statement:
 
-A new Flutter project.
+*You are working on an e-commerce website that is based on the flutter web, and clients want you to showcase products in rows if the website goes to tablet and mobile mode all products align to the next section.*
 
-## Getting Started
+**Which widget is required to achieve this Problem statement?**
 
-This project is a starting point for a Flutter application.
+ 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Test Case 1: `Wrap`
+Test Case 2: `SingleChildScrollView` with `Row`
