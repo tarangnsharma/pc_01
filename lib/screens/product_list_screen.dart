@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import '../models/product.dart';
 import '../widgets/product_list.dart';
 
-class ProductListScreen extends StatelessWidget {
+class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
+
+  @override
+  _ProductListScreenState createState() => _ProductListScreenState();
+}
+
+class _ProductListScreenState extends State<ProductListScreen> {
+  bool useWrapLayout = true; // Toggle between Wrap and SingleChildScrollView with Row
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +43,20 @@ class ProductListScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      body: ProductList(products: products),
+      appBar: AppBar(
+        title: const Text('Product List'),
+        actions: [
+          IconButton(
+            icon: Icon(useWrapLayout ? Icons.view_column : Icons.view_list),
+            onPressed: () {
+              setState(() {
+                useWrapLayout = !useWrapLayout;
+              });
+            },
+          ),
+        ],
+      ),
+      body: ProductList(products: products, useWrapLayout: useWrapLayout),
     );
   }
 }

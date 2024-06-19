@@ -8,8 +8,9 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: MediaQuery.of(context).size.width / 2 - 18, // Adjust width for tablets
+      margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0), // Add margin to avoid clumping
       child: Card(
         child: Column(
           children: [
